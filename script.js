@@ -25,7 +25,6 @@ function initMenuToggle() {
         }
     });
 
-    // Fermer le menu au clic sur un lien
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -47,7 +46,6 @@ function initThemeToggle() {
 
     if (!themeToggle) return;
 
-    // Charger le thème sauvegardé
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-theme');
@@ -88,20 +86,16 @@ function initBackgroundSwitcher() {
     if (!heroBackground || backgroundBtns.length === 0) return;
 
     // Fond par défaut
-    heroBackground.style.backgroundImage = "url('images/fond1.jpg')";
+    heroBackground.style.backgroundImage = "url('fond1.jpg')";
 
     backgroundBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const background = btn.getAttribute('data-background');
 
-            // Retirer la classe active de tous les boutons
             backgroundBtns.forEach(b => b.classList.remove('active'));
-
-            // Ajouter la classe active au bouton cliqué
             btn.classList.add('active');
 
-            // Changer l'arrière-plan
-            heroBackground.style.backgroundImage = `url('images/${background}')`;
+            heroBackground.style.backgroundImage = `url('${background}')`;
         });
     });
 }
@@ -130,21 +124,17 @@ function initSuggestionForm() {
         const name = nameInput.value.trim();
         const message = messageInput.value.trim();
 
-        // Validation
         if (name === '' || message === '') {
             formMessage.textContent = 'Veuillez remplir tous les champs.';
             formMessage.className = 'form-message error';
             return;
         }
 
-        // Simulation d'envoi
         formMessage.textContent = 'Merci pour votre message ! Il a bien été envoyé.';
         formMessage.className = 'form-message success';
 
-        // Réinitialiser le formulaire
         form.reset();
 
-        // Effacer le message après 5 secondes
         setTimeout(() => {
             formMessage.textContent = '';
             formMessage.className = 'form-message';
