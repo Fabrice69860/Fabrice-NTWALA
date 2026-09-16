@@ -714,9 +714,217 @@ a {
     border-radius: var(--radius);
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
+    text-align: center;
 }
 
 .suggestion-box > p {
     text-align: center;
     color: var(--text-muted);
-    margin-bottom
+    margin-bottom: 1.5rem;
+}
+
+/* ===================== FORMULAIRE WHATSAPP ===================== */
+#whatsapp-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+#whatsapp-form .form-group {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+#whatsapp-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+#whatsapp-form input {
+    width: 100%;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all var(--transition);
+}
+
+#whatsapp-form input:focus {
+    outline: none;
+    border-color: #25D366;
+    box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.15);
+}
+
+/* ===================== BOUTON WHATSAPP ===================== */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: #25D366;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe5b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+    color: #fff;
+}
+
+.whatsapp-btn i {
+    font-size: 1.4rem;
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+    background: var(--text);
+    color: var(--bg);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+body.dark-theme .footer {
+    background: #020617;
+    color: #f1f5f9;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 70px);
+        background: var(--bg);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-left: 1px solid var(--border);
+        transition: right var(--transition);
+        overflow-y: auto;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu a {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .theme-toggle {
+        margin-top: 1rem;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 4rem 0 5rem;
+    }
+
+    .hero-photo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .cv-box {
+        padding: 2rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .cv-box > div {
+        width: 100%;
+    }
+
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline::before {
+        left: 24px;
+    }
+
+    .project-card {
+        flex-direction: column;
+    }
+
+    .suggestion-box {
+        padding: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 3.5rem 0;
+    }
+
+    .background-controls {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 1rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        width: 100%;
+        right: -100%;
+    }
+}

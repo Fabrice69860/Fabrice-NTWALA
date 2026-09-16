@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
     initBackgroundSwitcher();
     initCurrentYear();
-    initSuggestionForm();
     initSmoothScroll();
+    initWhatsAppForm();
 });
 
 /* ===================== MENU MOBILE ===================== */
@@ -108,37 +108,38 @@ function initCurrentYear() {
     }
 }
 
-/* ===================== FORMULAIRE DE SUGGESTIONS ===================== */
-function initSuggestionForm() {
-    const form = document.getElementById('suggestion-form');
-    const formMessage = document.getElementById('form-message');
+/* ===================== FORMULAIRE WHATSAPP ===================== */
+function initWhatsAppForm() {
+    const form = document.getElementById('whatsapp-form');
 
-    if (!form || !formMessage) return;
+    if (!form) return;
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const nameInput = document.getElementById('name');
-        const messageInput = document.getElementById('message');
-
+        const nameInput = document.getElementById('visitor-name');
         const name = nameInput.value.trim();
-        const message = messageInput.value.trim();
 
-        if (name === '' || message === '') {
-            formMessage.textContent = 'Veuillez remplir tous les champs.';
-            formMessage.className = 'form-message error';
+        // Validation : au moins 2 caractères
+        if (name === '' || name.length < 2) {
+            alert('Veuillez entrer un nom valide (au moins 2 lettres).');
+            nameInput.focus();
             return;
         }
 
-        formMessage.textContent = 'Merci pour votre message ! Il a bien été envoyé.';
-        formMessage.className = 'form-message success';
+        // ⚠️ Remplace ce numéro par le tien si besoin
+        // Format international : indicatif pays + numéro, SANS + ni espaces
+        const phoneNumber = '243986707685';
 
-        form.reset();
+        // Message personnalisé avec le nom du visiteur
+        const message = `Bonjour Fabrice, je suis ${name}. J'ai une suggestion pour votre site :`;
 
-        setTimeout(() => {
-            formMessage.textContent = '';
-            formMessage.className = 'form-message';
-        }, 5000);
+        // Encoder le message pour l'URL
+        const encodedMessage = encodeURIComponent(message);
+
+        // Ouvrir WhatsApp (appli mobile ou WhatsApp Web)
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        window.open(whatsappURL, '_blank');
     });
 }
 
