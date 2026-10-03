@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabrice Ntwala | Développeur Web Frontend</title>
+    <meta name="description" content="Portfolio de Fabrice Ntwala, développeur web frontend passionné par l'informatique, les réseaux et la création de sites web modernes et responsives.">
+    <meta property="og:title" content="Fabrice Ntwala | Portfolio">
+    <meta property="og:description" content="Développeur web frontend passionné par l'informatique, les réseaux et la création de sites web modernes.">
+    <meta property="og:type" content="website">
 
     <!-- Bootstrap Icons -->
     <link
@@ -13,6 +17,9 @@
 
     <!-- Notre CSS -->
     <link rel="stylesheet" href="style.css">
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
 </head>
 
 <body>
@@ -29,6 +36,7 @@
                 class="menu-toggle"
                 id="menu-toggle"
                 aria-label="Ouvrir le menu"
+                aria-expanded="false"
                 type="button"
             >
                 <i class="bi bi-list"></i>
@@ -38,12 +46,12 @@
                 <a href="#accueil">Accueil</a>
                 <a href="#apropos">À propos</a>
                 <a href="#competences">Compétences</a>
+                <a href="#services">Services</a>
                 <a href="#projets">Projets</a>
                 <a href="#formation">Formation</a>
                 <a href="#experience">Expérience</a>
                 <a href="#cv">CV</a>
                 <a href="#contact">Contact</a>
-                <a href="#suggestions">Suggestions</a>
 
                 <button
                     id="theme-toggle"
@@ -111,21 +119,21 @@
                 <button
                     class="background-btn active"
                     data-background="fond1.jpg"
-                    aria-label="Fond 1"
+                    aria-label="Arrière-plan 1"
                     type="button"
                 ></button>
 
                 <button
                     class="background-btn"
                     data-background="fond2.jpg"
-                    aria-label="Fond 2"
+                    aria-label="Arrière-plan 2"
                     type="button"
                 ></button>
 
                 <button
                     class="background-btn"
                     data-background="fond3.jpg"
-                    aria-label="Fond 3"
+                    aria-label="Arrière-plan 3"
                     type="button"
                 ></button>
             </div>
@@ -204,46 +212,125 @@
 
                 <div class="skills-grid">
 
-                    <button class="skill-card" type="button">
+                    <button class="skill-card" type="button"
+                        data-skill="html"
+                        aria-label="En savoir plus sur HTML">
                         <i class="bi bi-filetype-html"></i>
                         <h3>HTML</h3>
                         <p>Structure des pages web.</p>
                     </button>
 
-                    <button class="skill-card" type="button">
+                    <button class="skill-card" type="button"
+                        data-skill="css"
+                        aria-label="En savoir plus sur CSS">
                         <i class="bi bi-filetype-css"></i>
                         <h3>CSS</h3>
                         <p>Design, mise en page et responsive.</p>
                     </button>
 
-                    <button class="skill-card" type="button">
+                    <button class="skill-card" type="button"
+                        data-skill="javascript"
+                        aria-label="En savoir plus sur JavaScript">
                         <i class="bi bi-filetype-js"></i>
                         <h3>JavaScript</h3>
                         <p>Interactions et fonctionnalités web.</p>
                     </button>
 
-                    <button class="skill-card" type="button">
+                    <button class="skill-card" type="button"
+                        data-skill="python"
+                        aria-label="En savoir plus sur Python">
                         <i class="bi bi-code-square"></i>
                         <h3>Python</h3>
                         <p>Programmation et création de projets.</p>
                     </button>
 
-                    <button class="skill-card" type="button">
+                    <button class="skill-card" type="button"
+                        data-skill="reseaux"
+                        aria-label="En savoir plus sur Réseaux informatiques">
                         <i class="bi bi-diagram-3"></i>
                         <h3>Réseaux</h3>
                         <p>Réseaux informatiques et dépannage.</p>
                     </button>
 
-                    <button class="skill-card" type="button">
+                    <button class="skill-card" type="button"
+                        data-skill="bases-donnees"
+                        aria-label="En savoir plus sur Bases de données">
                         <i class="bi bi-database"></i>
+                        <h3>Bases de données</h3>
+                        <p>Organisation et gestion des données.</p>
+                    </button>
+
+                    <button class="skill-card" type="button"
+                        data-skill="sql"
+                        aria-label="En savoir plus sur SQL">
+                        <i class="bi bi-server"></i>
                         <h3>SQL</h3>
                         <p>Gestion et interrogation des données.</p>
                     </button>
 
-                    <button class="skill-card" type="button">
-                        <i class="bi bi-server"></i>
+                    <button class="skill-card" type="button"
+                        data-skill="mysql"
+                        aria-label="En savoir plus sur MySQL">
+                        <i class="bi bi-hdd-network"></i>
                         <h3>MySQL</h3>
-                        <p>Gestion de bases de données.</p>
+                        <p>Gestion de bases de données relationnelles.</p>
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= SERVICES ================= -->
+        <section class="section" id="services">
+            <div class="container">
+
+                <div class="section-title">
+                    <span>MES SERVICES</span>
+                    <h2>Ce que je propose</h2>
+                </div>
+
+                <div class="services-grid">
+
+                    <button class="service-card" type="button"
+                        data-service="web"
+                        aria-label="En savoir plus sur Création de sites web">
+                        <i class="bi bi-globe2"></i>
+                        <h3>Création de sites web</h3>
+                        <p>Sites web modernes, responsives et interactifs.</p>
+                    </button>
+
+                    <button class="service-card" type="button"
+                        data-service="mobile"
+                        aria-label="En savoir plus sur Applications mobiles">
+                        <i class="bi bi-phone"></i>
+                        <h3>Applications mobiles</h3>
+                        <p>Applications simples et fonctionnelles.</p>
+                    </button>
+
+                    <button class="service-card" type="button"
+                        data-service="bdd"
+                        aria-label="En savoir plus sur Bases de données">
+                        <i class="bi bi-database"></i>
+                        <h3>Bases de données</h3>
+                        <p>Conception et gestion de bases de données.</p>
+                    </button>
+
+                    <button class="service-card" type="button"
+                        data-service="reseaux"
+                        aria-label="En savoir plus sur Réseaux locaux et maintenance">
+                        <i class="bi bi-router"></i>
+                        <h3>Réseaux locaux & maintenance</h3>
+                        <p>Configuration et maintenance de réseaux.</p>
+                    </button>
+
+                    <button class="service-card" type="button"
+                        data-service="assistance"
+                        aria-label="En savoir plus sur Assistance et solutions informatiques">
+                        <i class="bi bi-life-preserver"></i>
+                        <h3>Assistance & solutions IT</h3>
+                        <p>Dépannage et support informatique.</p>
                     </button>
 
                 </div>
@@ -253,7 +340,7 @@
 
 
         <!-- ================= PROJETS ================= -->
-        <section class="section" id="projets">
+        <section class="section section-alt" id="projets">
             <div class="container">
 
                 <div class="section-title">
@@ -263,7 +350,11 @@
 
                 <div class="projects-grid">
 
-                    <article class="project-card">
+                    <article class="project-card"
+                        data-project="portfolio"
+                        tabindex="0"
+                        role="button"
+                        aria-label="En savoir plus sur Portfolio personnel">
                         <div class="project-icon">
                             <i class="bi bi-globe2"></i>
                         </div>
@@ -281,11 +372,17 @@
                                 <span>CSS</span>
                                 <span>JavaScript</span>
                             </div>
+
+                            <span class="project-more">En savoir plus <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </article>
 
 
-                    <article class="project-card">
+                    <article class="project-card"
+                        data-project="snake"
+                        tabindex="0"
+                        role="button"
+                        aria-label="En savoir plus sur Jeu Snake">
                         <div class="project-icon">
                             <i class="bi bi-controller"></i>
                         </div>
@@ -302,11 +399,17 @@
                                 <span>Python</span>
                                 <span>Pygame</span>
                             </div>
+
+                            <span class="project-more">En savoir plus <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </article>
 
 
-                    <article class="project-card">
+                    <article class="project-card"
+                        data-project="excel-python"
+                        tabindex="0"
+                        role="button"
+                        aria-label="En savoir plus sur Excel + Python">
                         <div class="project-icon">
                             <i class="bi bi-file-earmark-spreadsheet"></i>
                         </div>
@@ -324,6 +427,8 @@
                                 <span>Excel</span>
                                 <span>Python</span>
                             </div>
+
+                            <span class="project-more">En savoir plus <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </article>
 
@@ -334,7 +439,7 @@
 
 
         <!-- ================= FORMATION ================= -->
-        <section class="section section-alt" id="formation">
+        <section class="section" id="formation">
             <div class="container">
 
                 <div class="section-title">
@@ -389,7 +494,7 @@
 
 
         <!-- ================= EXPÉRIENCE ================= -->
-        <section class="section" id="experience">
+        <section class="section section-alt" id="experience">
             <div class="container">
 
                 <div class="section-title">
@@ -436,33 +541,40 @@
 
 
         <!-- ================= CV ================= -->
-        <section class="section section-alt" id="cv">
+        <section class="section" id="cv">
             <div class="container">
 
-                <div class="cv-box">
+                <div class="section-title">
+                    <span>MON CV</span>
+                    <h2>Découvrez mon parcours professionnel</h2>
+                </div>
 
-                    <div>
-                        <span class="section-label">MON CV</span>
+                <div class="cv-intro">
+                    <p>
+                        Consultez mon CV directement ci-dessous pour découvrir
+                        mon parcours, mes formations, mes compétences et mes
+                        expériences.
+                    </p>
+                </div>
 
-                        <h2>Découvrez mon parcours professionnel</h2>
+                <div class="cv-viewer">
+                    <iframe
+                        src="cv-Fabrice-Ntwala.pdf"
+                        title="CV de Fabrice Ntwala"
+                        class="cv-iframe"
+                    ></iframe>
+                </div>
 
-                        <p>
-                            Consultez mon CV pour découvrir mon parcours,
-                            mes formations, mes compétences et mes
-                            expériences.
-                        </p>
-                    </div>
-
+                <div class="cv-actions">
                     <a
                         href="cv-Fabrice-Ntwala.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="btn primary-btn"
                     >
-                        <i class="bi bi-eye"></i>
-                        Voir mon CV
+                        <i class="bi bi-box-arrow-up-right"></i>
+                        Ouvrir dans un nouvel onglet
                     </a>
-
                 </div>
 
             </div>
@@ -470,7 +582,7 @@
 
 
         <!-- ================= CONTACT ================= -->
-        <section class="section" id="contact">
+        <section class="section section-alt" id="contact">
             <div class="container">
 
                 <div class="section-title">
@@ -497,6 +609,15 @@
 
 
                     <div class="contact-card">
+                        <i class="bi bi-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/243986707685" target="_blank" rel="noopener noreferrer">
+                            Discuter sur WhatsApp
+                        </a>
+                    </div>
+
+
+                    <div class="contact-card">
                         <i class="bi bi-linkedin"></i>
                         <h3>LinkedIn</h3>
                         <p>Fabrice NTWALA</p>
@@ -509,7 +630,7 @@
 
 
         <!-- ================= SUGGESTIONS ================= -->
-        <section class="section section-alt" id="suggestions">
+        <section class="section" id="suggestions">
             <div class="container">
 
                 <div class="section-title">
@@ -562,6 +683,27 @@
             </p>
         </div>
     </footer>
+
+
+    <!-- ================= MODALE GÉNÉRIQUE ================= -->
+    <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+        <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="modal-close" type="button" aria-label="Fermer la fenêtre">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="modal-icon" id="modal-icon"></div>
+            <h3 class="modal-title" id="modal-title"></h3>
+            <p class="modal-description" id="modal-description"></p>
+            <div class="modal-section">
+                <h4 id="modal-uses-title"></h4>
+                <ul class="modal-list" id="modal-uses"></ul>
+            </div>
+            <div class="modal-section">
+                <h4 id="modal-projects-title"></h4>
+                <p id="modal-projects"></p>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Notre JavaScript -->
