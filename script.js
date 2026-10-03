@@ -217,6 +217,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initSkillModals();
     initServiceModals();
     initProjectModals();
+    initScrollSpy();
+    initBackToTop();
+    initRevealOnScroll();
+    initVisitCounter();
 });
 
 /* ===================== MENU MOBILE ===================== */
@@ -492,3 +496,82 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+/* ===================== INDICATEUR SECTION ACTIVE ===================== */
+function initScrollSpy() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+    if (sections.length === 0 || navLinks.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === '#' + id) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        });
+    }, { rootMargin: '-80px 0px -70% 0px' });
+
+    sections.forEach(section => observer.observe(section));
+}
+
+/* ===================== BOUTON RETOUR EN HAUT ===================== */
+function initBackToTop() {
+    const btn = document.getElementById('back-to-top');
+    if (!btn) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 400) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+/* ===================== ANIMATION REVEAL AU DÉFILEMENT ===================== */
+function initRevealOnScroll() {
+    const elements = document.querySelectorAll('.section-title, .about-content, .timeline-item, .experience-card, .cv-viewer, .cv-actions, .suggestion-box');
+    if (elements.length === 0) return;
+
+    elements.forEach(el => el.classList.add('reveal'));
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    elements.forEach(el => observer.observe(el));
+}
+
+/* ===================== COMPTEUR DE VISITES ===================== */
+function initVisitCounter() {
+    const visitSpan = document.getElementById('visit-count');
+    if (!visitSpan) return;
+
+    const STORAGE_KEY = 'fn-visit-count';
+    let count = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10);
+
+    if (!sessionStorage.getItem('fn-session-counted')) {
+        count += 1;
+        localStorage.setItem(STORAGE_KEY, String(count));
+        sessionStorage.setItem('fn-session-counted', '1');
+    }
+
+    visitSpan.textContent = count;
+}
