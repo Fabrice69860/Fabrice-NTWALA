@@ -46,7 +46,7 @@
                 <a href="#competences">Compétences</a>
                 <a href="#projets">Projets</a>
                 <a href="#parcours">Parcours</a>
-                <a href="#cv">CV</a>
+                <a href="#snake">Jeu Snake</a>
                 <a href="#contact">Contact</a>
 
                 <button
@@ -361,7 +361,7 @@
                         data-project="snake"
                         tabindex="0"
                         role="button"
-                        aria-label="En savoir plus sur Jeu Snake">
+                        aria-label="Jouer au Jeu Snake">
                         <div class="project-icon">
                             <i class="bi bi-controller"></i>
                         </div>
@@ -370,17 +370,18 @@
                             <h3>Jeu Snake</h3>
 
                             <p>
-                                Jeu classique du serpent réalisé en
-                                Python avec Pygame. Gestion des
-                                collisions et des événements clavier.
+                                Le jeu classique du serpent, jouable
+                                directement ici. Version web en
+                                JavaScript, inspirée de mon projet
+                                Python original.
                             </p>
 
                             <div class="tags">
-                                <span>Python</span>
-                                <span>Pygame</span>
+                                <span>JavaScript</span>
+                                <span>Canvas</span>
                             </div>
 
-                            <span class="project-more">En savoir plus <i class="bi bi-arrow-right"></i></span>
+                            <span class="project-more">Jouer <i class="bi bi-play-circle"></i></span>
                         </div>
                     </article>
 
@@ -499,33 +500,62 @@
         </section>
 
 
-        <!-- ================= CV ================= -->
-        <section class="section" id="cv">
+        <!-- ================= JEU SNAKE ================= -->
+        <section class="section" id="snake">
             <div class="container">
 
                 <div class="section-title">
-                    <span>MON CV</span>
-                    <h2>Mon parcours en détail</h2>
+                    <span>JOUER</span>
+                    <h2>Jeu Snake</h2>
                 </div>
 
-                <div class="cv-viewer">
-                    <iframe
-                        src="cv-Fabrice-Ntwala.pdf"
-                        title="CV de Fabrice Ntwala"
-                        class="cv-iframe"
-                    ></iframe>
-                </div>
+                <div class="snake-game">
+                    <div class="snake-header">
+                        <div class="snake-score">
+                            <span class="snake-score-label">Score</span>
+                            <span id="snake-score" class="snake-score-value">0</span>
+                        </div>
+                        <div class="snake-score">
+                            <span class="snake-score-label">Record</span>
+                            <span id="snake-best" class="snake-score-value">0</span>
+                        </div>
+                    </div>
 
-                <div class="cv-actions">
-                    <a
-                        href="cv-Fabrice-Ntwala.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn secondary-btn small-btn"
-                    >
-                        <i class="bi bi-box-arrow-up-right"></i>
-                        Télécharger / Ouvrir
-                    </a>
+                    <div class="snake-canvas-wrapper">
+                        <canvas id="snake-canvas" width="360" height="360"></canvas>
+                        <div class="snake-overlay" id="snake-overlay">
+                            <div class="snake-overlay-content">
+                                <h3 id="snake-overlay-title">Prêt à jouer ?</h3>
+                                <p id="snake-overlay-text">Utilisez les flèches du clavier ou les boutons ci-dessous.</p>
+                                <button type="button" class="btn primary-btn" id="snake-start-btn">
+                                    <i class="bi bi-play-fill"></i>
+                                    <span id="snake-start-text">Démarrer</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="snake-controls">
+                        <button type="button" class="snake-dir-btn" data-dir="up" aria-label="Haut">
+                            <i class="bi bi-arrow-up"></i>
+                        </button>
+                        <div class="snake-dir-row">
+                            <button type="button" class="snake-dir-btn" data-dir="left" aria-label="Gauche">
+                                <i class="bi bi-arrow-left"></i>
+                            </button>
+                            <button type="button" class="snake-dir-btn" data-dir="down" aria-label="Bas">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                            <button type="button" class="snake-dir-btn" data-dir="right" aria-label="Droite">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="snake-hint">
+                        <i class="bi bi-keyboard"></i>
+                        Flèches du clavier ou ZQSD · Espace pour pause
+                    </p>
                 </div>
 
             </div>
@@ -633,10 +663,13 @@
     </button>
 
 
+
+
+
     <!-- ================= MODALE PROJETS ================= -->
     <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
         <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-            <button class="modal-close" id="modal-close" type="button" aria-label="Fermer la fenêtre">
+            <button class="modal-close" id="modal-close" type="button" aria-label="Fermer la fenetre">
                 <i class="bi bi-x-lg"></i>
             </button>
             <div class="modal-icon" id="modal-icon"></div>
@@ -652,7 +685,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="script.js"></script>
 
