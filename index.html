@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabrice Ntwala | Développeur Web Frontend</title>
-    <meta name="description" content="Portfolio de Fabrice Ntwala, développeur web frontend passionné par l'informatique, les réseaux et la création de sites web modernes et responsives.">
+    <title>Fabrice Ntwala | Développeur Web Junior</title>
+    <meta name="description" content="Portfolio de Fabrice Ntwala, développeur web junior passionné par l'informatique, les réseaux et la création de sites web modernes et responsives.">
     <meta property="og:title" content="Fabrice Ntwala | Portfolio">
-    <meta property="og:description" content="Développeur web frontend passionné par l'informatique, les réseaux et la création de sites web modernes.">
+    <meta property="og:description" content="Développeur web junior passionné par l'informatique, les réseaux et la création de sites web modernes.">
     <meta property="og:type" content="website">
 
-    <!-- Bootstrap Icons -->
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     >
-
-    <!-- Favicon SVG -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
-    <!-- Notre CSS -->
     <link rel="stylesheet" href="style.css">
-  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
 </head>
@@ -49,10 +44,8 @@
                 <a href="#accueil">Accueil</a>
                 <a href="#apropos">À propos</a>
                 <a href="#competences">Compétences</a>
-                <a href="#services">Services</a>
                 <a href="#projets">Projets</a>
-                <a href="#formation">Formation</a>
-                <a href="#experience">Expérience</a>
+                <a href="#parcours">Parcours</a>
                 <a href="#cv">CV</a>
                 <a href="#contact">Contact</a>
 
@@ -90,13 +83,14 @@
 
                     <p class="hero-small-title">Bonjour, je suis</p>
 
-                    <h1>NTWALA NKIERE FABRICE</h1>
+                    <h1>Fabrice Ntwala</h1>
 
-                    <h2>Développeur Web Frontend</h2>
+                    <h2 class="hero-subtitle">Développeur Web Junior</h2>
 
                     <p>
-                        Je crée des sites web modernes, responsifs et
-                        interactifs avec HTML, CSS et JavaScript.
+                        J'apprends en créant. Je construis des sites web
+                        avec HTML, CSS et JavaScript, et je livre des
+                        projets concrets à chaque étape de mon parcours.
                     </p>
 
                     <div class="hero-buttons">
@@ -117,30 +111,6 @@
 
             </div>
 
-            <!-- Boutons des arrière-plans -->
-            <div class="background-controls">
-                <button
-                    class="background-btn active"
-                    data-background="fond1.jpg"
-                    aria-label="Arrière-plan 1"
-                    type="button"
-                ></button>
-
-                <button
-                    class="background-btn"
-                    data-background="fond2.jpg"
-                    aria-label="Arrière-plan 2"
-                    type="button"
-                ></button>
-
-                <button
-                    class="background-btn"
-                    data-background="fond3.jpg"
-                    aria-label="Arrière-plan 3"
-                    type="button"
-                ></button>
-            </div>
-
         </section>
 
 
@@ -157,22 +127,26 @@
 
                     <div class="about-text">
                         <p>
-                            Je suis <strong>NTWALA NKIERE FABRICE</strong>,
-                            passionné par l'informatique, les réseaux
-                            et le développement web.
+                            Je m'appelle <strong>Fabrice Ntwala</strong>.
+                            Je suis passionné par l'informatique, les
+                            réseaux et le développement web.
                         </p>
 
                         <p>
-                            Je développe progressivement mes compétences
-                            dans la création de sites web modernes,
-                            responsifs et interactifs.
+                            Mon approche est simple : <strong>apprendre
+                            en faisant</strong>. Chaque projet est une
+                            occasion de mettre en pratique de nouvelles
+                            compétences et de livrer quelque chose
+                            d'utile et de fonctionnel.
                         </p>
 
                         <p>
-                            Mon objectif est de continuer à apprendre,
-                            réaliser des projets concrets et évoluer
-                            professionnellement dans le domaine
-                            informatique.
+                            Je maîtrise les bases du développement web
+                            avec HTML, CSS et JavaScript, et j'ai des
+                            compétences pratiques en réseaux (Cisco
+                            CCNA) et en bases de données. Mon objectif :
+                            continuer à progresser et à livrer des
+                            projets concrets.
                         </p>
                     </div>
 
@@ -213,128 +187,129 @@
                     <h2>Ce que je sais faire</h2>
                 </div>
 
-                <div class="skills-grid">
+                <div class="skills-accordion">
 
-                    <button class="skill-card" type="button"
-                        data-skill="html"
-                        aria-label="En savoir plus sur HTML">
-                        <i class="bi bi-filetype-html"></i>
-                        <h3>HTML</h3>
-                        <p>Structure des pages web.</p>
-                    </button>
+                    <div class="skill-category">
+                        <button class="skill-category-header" type="button" aria-expanded="false">
+                            <span class="skill-category-icon"><i class="bi bi-window-fullscreen"></i></span>
+                            <span class="skill-category-name">Frontend</span>
+                            <span class="skill-category-badge">HTML, CSS, JavaScript</span>
+                            <span class="skill-category-toggle"><i class="bi bi-chevron-down"></i></span>
+                        </button>
+                        <div class="skill-category-body">
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="bi bi-filetype-html"></i>
+                                    <div>
+                                        <h4>HTML</h4>
+                                        <p>Structure sémantique des pages web, formulaires, accessibilité.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="bi bi-filetype-css"></i>
+                                    <div>
+                                        <h4>CSS</h4>
+                                        <p>Mise en page responsive, animations, mode clair/sombre.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="bi bi-filetype-js"></i>
+                                    <div>
+                                        <h4>JavaScript</h4>
+                                        <p>Interactions, manipulation du DOM, formulaires, APIs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <button class="skill-card" type="button"
-                        data-skill="css"
-                        aria-label="En savoir plus sur CSS">
-                        <i class="bi bi-filetype-css"></i>
-                        <h3>CSS</h3>
-                        <p>Design, mise en page et responsive.</p>
-                    </button>
+                    <div class="skill-category">
+                        <button class="skill-category-header" type="button" aria-expanded="false">
+                            <span class="skill-category-icon"><i class="bi bi-code-square"></i></span>
+                            <span class="skill-category-name">Programmation</span>
+                            <span class="skill-category-badge">Python, automatisation</span>
+                            <span class="skill-category-toggle"><i class="bi bi-chevron-down"></i></span>
+                        </button>
+                        <div class="skill-category-body">
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="bi bi-code-square"></i>
+                                    <div>
+                                        <h4>Python</h4>
+                                        <p>Automatisation, traitement de données, projets d'apprentissage.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="bi bi-file-earmark-spreadsheet"></i>
+                                    <div>
+                                        <h4>Automatisation Excel</h4>
+                                        <p>Scripts Python pour traiter et automatiser des fichiers Excel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <button class="skill-card" type="button"
-                        data-skill="javascript"
-                        aria-label="En savoir plus sur JavaScript">
-                        <i class="bi bi-filetype-js"></i>
-                        <h3>JavaScript</h3>
-                        <p>Interactions et fonctionnalités web.</p>
-                    </button>
+                    <div class="skill-category">
+                        <button class="skill-category-header" type="button" aria-expanded="false">
+                            <span class="skill-category-icon"><i class="bi bi-diagram-3"></i></span>
+                            <span class="skill-category-name">Réseaux</span>
+                            <span class="skill-category-badge">Cisco CCNA, IT Essentials</span>
+                            <span class="skill-category-toggle"><i class="bi bi-chevron-down"></i></span>
+                        </button>
+                        <div class="skill-category-body">
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="bi bi-diagram-3"></i>
+                                    <div>
+                                        <h4>Réseaux informatiques</h4>
+                                        <p>Configuration de réseaux locaux (LAN), TCP/IP, DNS, DHCP, dépannage.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="bi bi-router"></i>
+                                    <div>
+                                        <h4>Cisco CCNA 1 & 2</h4>
+                                        <p>Paramétrage de routeurs et switchs, routage, sécurité réseau.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="bi bi-pc-display"></i>
+                                    <div>
+                                        <h4>IT Essentials</h4>
+                                        <p>Maintenance matérielle et logicielle, support informatique.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <button class="skill-card" type="button"
-                        data-skill="python"
-                        aria-label="En savoir plus sur Python">
-                        <i class="bi bi-code-square"></i>
-                        <h3>Python</h3>
-                        <p>Programmation et création de projets.</p>
-                    </button>
-
-                    <button class="skill-card" type="button"
-                        data-skill="reseaux"
-                        aria-label="En savoir plus sur Réseaux informatiques">
-                        <i class="bi bi-diagram-3"></i>
-                        <h3>Réseaux</h3>
-                        <p>Réseaux informatiques et dépannage.</p>
-                    </button>
-
-                    <button class="skill-card" type="button"
-                        data-skill="bases-donnees"
-                        aria-label="En savoir plus sur Bases de données">
-                        <i class="bi bi-database"></i>
-                        <h3>Bases de données</h3>
-                        <p>Organisation et gestion des données.</p>
-                    </button>
-
-                    <button class="skill-card" type="button"
-                        data-skill="sql"
-                        aria-label="En savoir plus sur SQL">
-                        <i class="bi bi-server"></i>
-                        <h3>SQL</h3>
-                        <p>Gestion et interrogation des données.</p>
-                    </button>
-
-                    <button class="skill-card" type="button"
-                        data-skill="mysql"
-                        aria-label="En savoir plus sur MySQL">
-                        <i class="bi bi-hdd-network"></i>
-                        <h3>MySQL</h3>
-                        <p>Gestion de bases de données relationnelles.</p>
-                    </button>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ================= SERVICES ================= -->
-        <section class="section" id="services">
-            <div class="container">
-
-                <div class="section-title">
-                    <span>MES SERVICES</span>
-                    <h2>Ce que je propose</h2>
-                </div>
-
-                <div class="services-grid">
-
-                    <button class="service-card" type="button"
-                        data-service="web"
-                        aria-label="En savoir plus sur Création de sites web">
-                        <i class="bi bi-globe2"></i>
-                        <h3>Création de sites web</h3>
-                        <p>Sites web modernes, responsives et interactifs.</p>
-                    </button>
-
-                    <button class="service-card" type="button"
-                        data-service="mobile"
-                        aria-label="En savoir plus sur Applications mobiles">
-                        <i class="bi bi-phone"></i>
-                        <h3>Applications mobiles</h3>
-                        <p>Applications simples et fonctionnelles.</p>
-                    </button>
-
-                    <button class="service-card" type="button"
-                        data-service="bdd"
-                        aria-label="En savoir plus sur Bases de données">
-                        <i class="bi bi-database"></i>
-                        <h3>Bases de données</h3>
-                        <p>Conception et gestion de bases de données.</p>
-                    </button>
-
-                    <button class="service-card" type="button"
-                        data-service="reseaux"
-                        aria-label="En savoir plus sur Réseaux locaux et maintenance">
-                        <i class="bi bi-router"></i>
-                        <h3>Réseaux locaux & maintenance</h3>
-                        <p>Configuration et maintenance de réseaux.</p>
-                    </button>
-
-                    <button class="service-card" type="button"
-                        data-service="assistance"
-                        aria-label="En savoir plus sur Assistance et solutions informatiques">
-                        <i class="bi bi-life-preserver"></i>
-                        <h3>Assistance & solutions IT</h3>
-                        <p>Dépannage et support informatique.</p>
-                    </button>
+                    <div class="skill-category">
+                        <button class="skill-category-header" type="button" aria-expanded="false">
+                            <span class="skill-category-icon"><i class="bi bi-database"></i></span>
+                            <span class="skill-category-name">Bases de données</span>
+                            <span class="skill-category-badge">SQL, MySQL</span>
+                            <span class="skill-category-toggle"><i class="bi bi-chevron-down"></i></span>
+                        </button>
+                        <div class="skill-category-body">
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="bi bi-server"></i>
+                                    <div>
+                                        <h4>SQL</h4>
+                                        <p>Requêtes SELECT, INSERT, UPDATE, JOIN, filtrage et tri.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="bi bi-hdd-network"></i>
+                                    <div>
+                                        <h4>MySQL</h4>
+                                        <p>Création de tables, relations, administration et optimisation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -343,7 +318,7 @@
 
 
         <!-- ================= PROJETS ================= -->
-        <section class="section section-alt" id="projets">
+        <section class="section" id="projets">
             <div class="container">
 
                 <div class="section-title">
@@ -366,8 +341,9 @@
                             <h3>Portfolio personnel</h3>
 
                             <p>
-                                Création d'un site portfolio moderne
-                                avec HTML, CSS et JavaScript.
+                                Ce site : un portfolio one-page avec
+                                design responsive, mode sombre et
+                                interactions en JavaScript.
                             </p>
 
                             <div class="tags">
@@ -394,8 +370,9 @@
                             <h3>Jeu Snake</h3>
 
                             <p>
-                                Projet d'apprentissage réalisé avec
-                                Python et Pygame.
+                                Jeu classique du serpent réalisé en
+                                Python avec Pygame. Gestion des
+                                collisions et des événements clavier.
                             </p>
 
                             <div class="tags">
@@ -421,9 +398,9 @@
                             <h3>Excel + Python</h3>
 
                             <p>
-                                Projet d'apprentissage autour de
-                                l'automatisation et du traitement
-                                de données.
+                                Automatisation de tâches Excel avec
+                                des scripts Python pour traiter des
+                                données rapidement.
                             </p>
 
                             <div class="tags">
@@ -441,13 +418,13 @@
         </section>
 
 
-        <!-- ================= FORMATION ================= -->
-        <section class="section" id="formation">
+        <!-- ================= PARCOURS (FORMATION + EXPÉRIENCE) ================= -->
+        <section class="section section-alt" id="parcours">
             <div class="container">
 
                 <div class="section-title">
-                    <span>FORMATION</span>
-                    <h2>Mon parcours</h2>
+                    <span>PARCOURS</span>
+                    <h2>Formation et expérience</h2>
                 </div>
 
                 <div class="timeline">
@@ -473,7 +450,7 @@
                         <div class="timeline-content">
                             <span>Formation professionnelle</span>
                             <h3>Cisco CCNA 1 & 2</h3>
-                            <p>Formation en réseaux informatiques.</p>
+                            <p>Formation en réseaux informatiques : routage, switchs, protocoles.</p>
                         </div>
                     </div>
 
@@ -490,52 +467,31 @@
                         </div>
                     </div>
 
-                </div>
 
-            </div>
-        </section>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
 
-
-        <!-- ================= EXPÉRIENCE ================= -->
-        <section class="section section-alt" id="experience">
-            <div class="container">
-
-                <div class="section-title">
-                    <span>EXPÉRIENCE</span>
-                    <h2>Mon expérience professionnelle</h2>
-                </div>
-
-                <div class="experience-grid">
-
-                    <article class="experience-card">
-                        <i class="bi bi-building"></i>
-                        <h3>Stage professionnel</h3>
-                        <p>
-                            Expérience dans un environnement
-                            professionnel informatique et
-                            télécommunication.
-                        </p>
-                    </article>
+                        <div class="timeline-content">
+                            <span>Expérience professionnelle</span>
+                            <h3>Stage professionnel</h3>
+                            <p>Environnement professionnel informatique et télécommunication.</p>
+                        </div>
+                    </div>
 
 
-                    <article class="experience-card">
-                        <i class="bi bi-keyboard"></i>
-                        <h3>Opérateur de saisie</h3>
-                        <p>
-                            Expérience dans la saisie et le traitement
-                            des données.
-                        </p>
-                    </article>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="bi bi-keyboard"></i>
+                        </div>
 
-
-                    <article class="experience-card">
-                        <i class="bi bi-router"></i>
-                        <h3>Réseaux informatiques</h3>
-                        <p>
-                            Formation et pratique autour des réseaux,
-                            équipements et dépannage.
-                        </p>
-                    </article>
+                        <div class="timeline-content">
+                            <span>Expérience professionnelle</span>
+                            <h3>Opérateur de saisie</h3>
+                            <p>Saisie et traitement des données.</p>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -549,15 +505,7 @@
 
                 <div class="section-title">
                     <span>MON CV</span>
-                    <h2>Découvrez mon parcours professionnel</h2>
-                </div>
-
-                <div class="cv-intro">
-                    <p>
-                        Consultez mon CV directement ci-dessous pour découvrir
-                        mon parcours, mes formations, mes compétences et mes
-                        expériences.
-                    </p>
+                    <h2>Mon parcours en détail</h2>
                 </div>
 
                 <div class="cv-viewer">
@@ -573,10 +521,10 @@
                         href="cv-Fabrice-Ntwala.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn primary-btn"
+                        class="btn secondary-btn small-btn"
                     >
                         <i class="bi bi-box-arrow-up-right"></i>
-                        Ouvrir dans un nouvel onglet
+                        Télécharger / Ouvrir
                     </a>
                 </div>
 
@@ -593,40 +541,27 @@
                     <h2>Me contacter</h2>
                 </div>
 
-                <div class="contact-grid">
+                <div class="contact-simple">
 
-                    <div class="contact-card">
+                    <a href="tel:+243986707685" class="contact-line">
                         <i class="bi bi-telephone"></i>
-                        <h3>Téléphone</h3>
-                        <a href="tel:+243986707685">+243 986 707 685</a>
-                    </div>
+                        <span>+243 986 707 685</span>
+                    </a>
 
-
-                    <div class="contact-card">
+                    <a href="mailto:fabricentwala0@gmail.com" class="contact-line">
                         <i class="bi bi-envelope"></i>
-                        <h3>Email</h3>
-                        <a href="mailto:fabricentwala0@gmail.com">
-                            fabricentwala0@gmail.com
-                        </a>
-                    </div>
+                        <span>fabricentwala0@gmail.com</span>
+                    </a>
 
-
-                    <div class="contact-card">
+                    <a href="https://wa.me/243986707685" target="_blank" rel="noopener noreferrer" class="contact-line">
                         <i class="bi bi-whatsapp"></i>
-                        <h3>WhatsApp</h3>
-                        <a href="https://wa.me/243986707685" target="_blank" rel="noopener noreferrer">
-                            Discuter sur WhatsApp
-                        </a>
-                    </div>
+                        <span>Discuter sur WhatsApp</span>
+                    </a>
 
-
-                    <div class="contact-card">
+                    <a href="https://www.linkedin.com/in/fabrice-ntwala-4a945440a" target="_blank" rel="noopener noreferrer" class="contact-line">
                         <i class="bi bi-linkedin"></i>
-                        <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/fabrice-ntwala-4a945440a" target="_blank" rel="noopener noreferrer">
-                            Fabrice NTWALA
-                        </a>
-                    </div>
+                        <span>LinkedIn — Fabrice Ntwala</span>
+                    </a>
 
                 </div>
 
@@ -693,13 +628,12 @@
         </div>
     </footer>
 
-    <!-- Bouton retour en haut -->
     <button id="back-to-top" class="back-to-top" aria-label="Retour en haut" type="button">
         <i class="bi bi-arrow-up"></i>
     </button>
 
 
-    <!-- ================= MODALE GÉNÉRIQUE ================= -->
+    <!-- ================= MODALE PROJETS ================= -->
     <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
         <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <button class="modal-close" id="modal-close" type="button" aria-label="Fermer la fenêtre">
@@ -720,7 +654,6 @@
     </div>
 
 
-    <!-- Notre JavaScript -->
     <script src="script.js"></script>
 
 </body>
